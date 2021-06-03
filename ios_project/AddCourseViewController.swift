@@ -8,19 +8,13 @@
 import UIKit
 
 class AddCourseViewController: UIViewController {
-
-
-    @IBOutlet weak var backToPage5: UIButton!
     
     
     @IBAction func addNew(_ sender: Any) {
         alert()
     }
     
-    @IBAction func backToPage5(_ sender: UIButton) {
-        dismiss (animated: true, completion: nil)
-        
-    }
+
     func alert(){
     let alertController = UIAlertController(title: "課表名稱", message: "請輸入欲新增的課表名稱", preferredStyle: UIAlertController.Style.alert)
     alertController.view.tintColor = UIColor.gray

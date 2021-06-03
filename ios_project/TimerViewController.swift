@@ -12,7 +12,6 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var redButton: UIImageView!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
-    @IBOutlet weak var backToPage2: UIButton!
     @IBOutlet weak var record: UIButton!
     
     @IBOutlet weak var howToUse: UIButton!
@@ -21,9 +20,7 @@ class TimerViewController: UIViewController {
         
         alert()
     }
-    @IBAction func backToPage2(_ sender: UIButton) {
-        dismiss (animated: true, completion: nil)
-    }
+
     func alert(){
     let alertController = UIAlertController(title: "計時器說明", message: "1. 按start開始計時  2. 按中間紅色按鈕紀錄（計時器並不會停止計時）  3. 按stop結束計時", preferredStyle: UIAlertController.Style.alert)
     alertController.view.tintColor = UIColor.gray

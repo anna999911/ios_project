@@ -11,12 +11,6 @@ class BeforeViewController: UIViewController {
 
     
     @IBOutlet weak var edit: UIButton!
-    @IBOutlet weak var backToPage2: UIButton!
-    
-    @IBAction func backToPage2(_ sender: UIButton) {
-        dismiss (animated: true, completion: nil)
-        
-    }
     
     
  

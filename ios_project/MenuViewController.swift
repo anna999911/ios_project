@@ -8,40 +8,11 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-    @IBOutlet weak var backToPage1: UIButton!
     
     @IBOutlet weak var chosseCourse: UIButton!
     @IBOutlet weak var before: UIButton!
     
     @IBOutlet weak var timer: UIButton!
-    
-
-    @IBAction func chooseCourse(_ sender: UIButton) {
-        if let controller = storyboard?.instantiateViewController(withIdentifier: "page5")
-        {
-        present( controller , animated: true, completion: nil)
-        
-        }
-        
-    }
-    @IBAction func backToPage1(_ sender: UIButton) {
-        dismiss (animated: true, completion: nil)
-    }
-    
-    @IBAction func changeToBefore(_ sender: UIButton) {
-        if let controller = storyboard?.instantiateViewController(withIdentifier: "Page4")
-        {
-        present( controller , animated: true, completion: nil)
-        
-        }
-    }
-    @IBAction func Timer(_ sender: UIButton) {
-        if let controller = storyboard?.instantiateViewController(withIdentifier: "Page3")
-        {
-        present( controller , animated: true, completion: nil)
-        
-        }
-    }
     
     
     override func viewDidLoad() {

@@ -16,9 +16,6 @@ class CourseViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     @IBOutlet weak var tableView: UITableView!
     
-    
-    @IBOutlet weak var backToPage2: UIButton!
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return names.count
     }
@@ -29,23 +26,6 @@ class CourseViewController: UIViewController,UITableViewDelegate,UITableViewData
         return cell
     }
     
-    
-    @IBAction func addCourse(_ sender: Any) {
-        
-       
-        if let controller = storyboard?.instantiateViewController(withIdentifier: "page6")
-        {
-        present( controller , animated: true, completion: nil)
-        
-        }
-       
-    }
-  
-    
-    
-    @IBAction func backToPage2(_ sender: UIButton) {
-        dismiss (animated: true, completion: nil)
-    }
 
     func tableView(_ tableView:UITableView,editingStyleForRowAt indexPath:IndexPath) ->UITableViewCell.EditingStyle{
         return.none

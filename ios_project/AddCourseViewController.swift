@@ -26,6 +26,7 @@ class AddCourseViewController: UIViewController {
     alertController.view.tintColor = UIColor.gray
         alertController.addTextField{(textField) in
             textField.text = "Input Name"}
+        
     let butAction = UIAlertAction(title: "確定新增", style: UIAlertAction.Style.default, handler:nil)
         
     alertController.addAction(butAction)

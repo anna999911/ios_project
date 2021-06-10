@@ -13,20 +13,21 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var record: UIButton!
-    
-    @IBOutlet weak var howToUse: UIButton!
-    
-    @IBAction func howToUse(_ sender: UIButton) {
-        
-        alert()
+
+ 
+    @IBOutlet weak var usageInfoBtn: UIButton!
+    @IBAction func howToUse(_ sender: UIButton)
+    {
+        alertUsageInfo()
     }
 
-    func alert(){
-    let alertController = UIAlertController(title: "計時器說明", message: "1. 按start開始計時  2. 按中間紅色按鈕紀錄（計時器並不會停止計時）  3. 按stop結束計時", preferredStyle: UIAlertController.Style.alert)
-    alertController.view.tintColor = UIColor.gray
-    let butAction = UIAlertAction(title: "我知道了", style: UIAlertAction.Style.default, handler:nil)
-    alertController.addAction(butAction)
-    self.present(alertController, animated: true, completion: nil)
+    func alertUsageInfo()
+    {
+        let alertController = UIAlertController(title: "計時器說明", message: "1. 按start開始計時  2. 按中間紅色按鈕紀錄（計時器並不會停止計時）  3. 按stop結束計時", preferredStyle: UIAlertController.Style.alert)
+        alertController.view.tintColor = UIColor.gray
+        let butAction = UIAlertAction(title: "我知道了", style: UIAlertAction.Style.default, handler:nil)
+        alertController.addAction(butAction)
+        self.present(alertController, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {

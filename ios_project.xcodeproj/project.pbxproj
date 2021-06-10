@@ -11,7 +11,6 @@
 		95307AA4265FE1ED0066A156 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95307AA3265FE1ED0066A156 /* SceneDelegate.swift */; };
 		95307AA6265FE1ED0066A156 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95307AA5265FE1ED0066A156 /* ViewController.swift */; };
 		95307AA9265FE1ED0066A156 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95307AA7265FE1ED0066A156 /* Main.storyboard */; };
-		95307AAC265FE1ED0066A156 /* ios_project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95307AAA265FE1ED0066A156 /* ios_project.xcdatamodeld */; };
 		95307AAE265FE1F10066A156 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95307AAD265FE1F10066A156 /* Assets.xcassets */; };
 		95307AB1265FE1F10066A156 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95307AAF265FE1F10066A156 /* LaunchScreen.storyboard */; };
 		95307ABC265FE1F10066A156 /* ios_projectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95307ABB265FE1F10066A156 /* ios_projectTests.swift */; };
@@ -19,13 +18,19 @@
 		95307AD82663DA6E0066A156 /* Page1.png in Resources */ = {isa = PBXBuildFile; fileRef = 95307AD72663DA6D0066A156 /* Page1.png */; };
 		95307ADD2663DFDF0066A156 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95307ADC2663DFDE0066A156 /* MenuViewController.swift */; };
 		95307AE22663E2760066A156 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95307AE12663E2760066A156 /* TimerViewController.swift */; };
-		95A3EA16266528390086B0A1 /* BeforeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A3EA15266528390086B0A1 /* BeforeViewController.swift */; };
+		95A3EA16266528390086B0A1 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A3EA15266528390086B0A1 /* RecordViewController.swift */; };
 		95A3EA1E266675E50086B0A1 /* page2.png in Resources */ = {isa = PBXBuildFile; fileRef = 95A3EA1D266675E50086B0A1 /* page2.png */; };
 		95A3EA232666781D0086B0A1 /* page4.png in Resources */ = {isa = PBXBuildFile; fileRef = 95A3EA222666781D0086B0A1 /* page4.png */; };
 		95A3EA2826667BE50086B0A1 /* page3.png in Resources */ = {isa = PBXBuildFile; fileRef = 95A3EA2726667BE50086B0A1 /* page3.png */; };
 		95A3EA3226675DD20086B0A1 /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A3EA3126675DD20086B0A1 /* CourseViewController.swift */; };
 		95A3EA3D26676F640086B0A1 /* AddCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A3EA3C26676F640086B0A1 /* AddCourseViewController.swift */; };
 		95A3EA65266903410086B0A1 /* page5.png in Resources */ = {isa = PBXBuildFile; fileRef = 95A3EA64266903410086B0A1 /* page5.png */; };
+		BB3EDBAB2672864900069FE4 /* workout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BB3EDBA92672864900069FE4 /* workout.xcdatamodeld */; };
+		BB3EDBB02672983C00069FE4 /* AddWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3EDBAF2672983C00069FE4 /* AddWorkoutViewController.swift */; };
+		BB3EDBBB2672A07100069FE4 /* Course+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3EDBB72672A07100069FE4 /* Course+CoreDataClass.swift */; };
+		BB3EDBBC2672A07100069FE4 /* Course+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3EDBB82672A07100069FE4 /* Course+CoreDataProperties.swift */; };
+		BB3EDBBD2672A07100069FE4 /* Workout+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3EDBB92672A07100069FE4 /* Workout+CoreDataClass.swift */; };
+		BB3EDBBE2672A07100069FE4 /* Workout+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3EDBBA2672A07100069FE4 /* Workout+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +56,6 @@
 		95307AA3265FE1ED0066A156 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		95307AA5265FE1ED0066A156 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		95307AA8265FE1ED0066A156 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		95307AAB265FE1ED0066A156 /* ios_project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ios_project.xcdatamodel; sourceTree = "<group>"; };
 		95307AAD265FE1F10066A156 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95307AB0265FE1F10066A156 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95307AB2265FE1F10066A156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,7 +68,7 @@
 		95307AD72663DA6D0066A156 /* Page1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Page1.png; sourceTree = "<group>"; };
 		95307ADC2663DFDE0066A156 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		95307AE12663E2760066A156 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
-		95A3EA15266528390086B0A1 /* BeforeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeViewController.swift; sourceTree = "<group>"; };
+		95A3EA15266528390086B0A1 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		95A3EA1D266675E50086B0A1 /* page2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page2.png; sourceTree = "<group>"; };
 		95A3EA222666781D0086B0A1 /* page4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page4.png; sourceTree = "<group>"; };
 		95A3EA2726667BE50086B0A1 /* page3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page3.png; sourceTree = "<group>"; };
@@ -72,6 +76,12 @@
 		95A3EA3C26676F640086B0A1 /* AddCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCourseViewController.swift; sourceTree = "<group>"; };
 		95A3EA4F26687EB70086B0A1 /* Button_record.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_record.png; sourceTree = "<group>"; };
 		95A3EA64266903410086B0A1 /* page5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page5.png; sourceTree = "<group>"; };
+		BB3EDBAA2672864900069FE4 /* workout.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = workout.xcdatamodel; sourceTree = "<group>"; };
+		BB3EDBAF2672983C00069FE4 /* AddWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutViewController.swift; sourceTree = "<group>"; };
+		BB3EDBB72672A07100069FE4 /* Course+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Course+CoreDataClass.swift"; path = "CoreDataManagment/Course+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BB3EDBB82672A07100069FE4 /* Course+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Course+CoreDataProperties.swift"; path = "CoreDataManagment/Course+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BB3EDBB92672A07100069FE4 /* Workout+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Workout+CoreDataClass.swift"; path = "CoreDataManagment/Workout+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BB3EDBBA2672A07100069FE4 /* Workout+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Workout+CoreDataProperties.swift"; path = "CoreDataManagment/Workout+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +112,14 @@
 		95307A95265FE1ED0066A156 = {
 			isa = PBXGroup;
 			children = (
+				BB3EDBB72672A07100069FE4 /* Course+CoreDataClass.swift */,
+				BB3EDBB82672A07100069FE4 /* Course+CoreDataProperties.swift */,
+				BB3EDBB92672A07100069FE4 /* Workout+CoreDataClass.swift */,
+				BB3EDBBA2672A07100069FE4 /* Workout+CoreDataProperties.swift */,
 				95307AA0265FE1ED0066A156 /* ios_project */,
-				95307ABA265FE1F10066A156 /* ios_projectTests */,
 				95307AC5265FE1F10066A156 /* ios_projectUITests */,
 				95307A9F265FE1ED0066A156 /* Products */,
+				95307ABA265FE1F10066A156 /* ios_projectTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,18 +138,19 @@
 			children = (
 				95307AA1265FE1ED0066A156 /* AppDelegate.swift */,
 				95307AA3265FE1ED0066A156 /* SceneDelegate.swift */,
-				95307AA5265FE1ED0066A156 /* ViewController.swift */,
 				95307AA7265FE1ED0066A156 /* Main.storyboard */,
 				95307AAD265FE1F10066A156 /* Assets.xcassets */,
 				95307AAF265FE1F10066A156 /* LaunchScreen.storyboard */,
 				95307AB2265FE1F10066A156 /* Info.plist */,
 				95A3EA4E26687E870086B0A1 /* image */,
-				95307AAA265FE1ED0066A156 /* ios_project.xcdatamodeld */,
+				95307AA5265FE1ED0066A156 /* ViewController.swift */,
 				95307ADC2663DFDE0066A156 /* MenuViewController.swift */,
 				95307AE12663E2760066A156 /* TimerViewController.swift */,
-				95A3EA15266528390086B0A1 /* BeforeViewController.swift */,
+				95A3EA15266528390086B0A1 /* RecordViewController.swift */,
 				95A3EA3126675DD20086B0A1 /* CourseViewController.swift */,
 				95A3EA3C26676F640086B0A1 /* AddCourseViewController.swift */,
+				BB3EDBAF2672983C00069FE4 /* AddWorkoutViewController.swift */,
+				BB3EDBA92672864900069FE4 /* workout.xcdatamodeld */,
 			);
 			path = ios_project;
 			sourceTree = "<group>";
@@ -306,15 +321,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95A3EA16266528390086B0A1 /* BeforeViewController.swift in Sources */,
+				95A3EA16266528390086B0A1 /* RecordViewController.swift in Sources */,
 				95A3EA3D26676F640086B0A1 /* AddCourseViewController.swift in Sources */,
 				95307AA6265FE1ED0066A156 /* ViewController.swift in Sources */,
 				95307ADD2663DFDF0066A156 /* MenuViewController.swift in Sources */,
-				95307AAC265FE1ED0066A156 /* ios_project.xcdatamodeld in Sources */,
 				95307AA2265FE1ED0066A156 /* AppDelegate.swift in Sources */,
+				BB3EDBBE2672A07100069FE4 /* Workout+CoreDataProperties.swift in Sources */,
+				BB3EDBBB2672A07100069FE4 /* Course+CoreDataClass.swift in Sources */,
+				BB3EDBBD2672A07100069FE4 /* Workout+CoreDataClass.swift in Sources */,
 				95A3EA3226675DD20086B0A1 /* CourseViewController.swift in Sources */,
+				BB3EDBB02672983C00069FE4 /* AddWorkoutViewController.swift in Sources */,
+				BB3EDBAB2672864900069FE4 /* workout.xcdatamodeld in Sources */,
 				95307AE22663E2760066A156 /* TimerViewController.swift in Sources */,
 				95307AA4265FE1ED0066A156 /* SceneDelegate.swift in Sources */,
+				BB3EDBBC2672A07100069FE4 /* Course+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,13 +673,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		95307AAA265FE1ED0066A156 /* ios_project.xcdatamodeld */ = {
+		BB3EDBA92672864900069FE4 /* workout.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				95307AAB265FE1ED0066A156 /* ios_project.xcdatamodel */,
+				BB3EDBAA2672864900069FE4 /* workout.xcdatamodel */,
 			);
-			currentVersion = 95307AAB265FE1ED0066A156 /* ios_project.xcdatamodel */;
-			path = ios_project.xcdatamodeld;
+			currentVersion = BB3EDBAA2672864900069FE4 /* workout.xcdatamodel */;
+			path = workout.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

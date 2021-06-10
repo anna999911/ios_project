@@ -7,10 +7,13 @@
 
 import UIKit
 
-class BeforeViewController: UIViewController {
+class RecordViewController: UIViewController {
 
     
-    @IBOutlet weak var edit: UIButton!
+    
+    @IBAction func Edit(_ sender: UIBarButtonItem)
+    {
+    }
     
     
  
@@ -39,7 +42,7 @@ class BeforeViewController: UIViewController {
             localeIdentifier: "zh_TW") as Locale
         myDatePicker.addTarget(self,
                                action:
-                                #selector(BeforeViewController.datePickerChanged),
+                                #selector(RecordViewController.datePickerChanged),
                                for: .valueChanged)
         
         myDatePicker.center = CGPoint(

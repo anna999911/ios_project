@@ -8,12 +8,16 @@
 import UIKit
 
 class CourseViewController: UIViewController,UITableViewDelegate,UITableViewDataSource  {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.isEditing = true
+        tableView.allowsSelection = true
+        // Do any additional setup after loading the view.
+    }
+    //MARK: - TableView
+    
     var names = ["1","2","3","4"]
-    
-    
-    @IBOutlet weak var text: UITextField!
-    
-    
     @IBOutlet weak var tableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,22 +46,18 @@ class CourseViewController: UIViewController,UITableViewDelegate,UITableViewData
             
         }
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tableView.isEditing = true
-        tableView.allowsSelection = true
-        // Do any additional setup after loading the view.
-    }
-    
-
-    /*
+   
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if(segue.identifier == "addCourse")
+        {
+            let coursePage = segue.destination as! AddCourseViewController
+        }
     }
-    */
+    
 
 }

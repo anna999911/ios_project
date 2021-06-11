@@ -85,7 +85,7 @@
         <!--Timer View Controller-->
         <scene sceneID="Ddf-81-WDW">
             <objects>
-                <viewController storyboardIdentifier="Page3" id="hKw-63-KGh" customClass="TimerViewController" customModule="ios_project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="timer" id="hKw-63-KGh" customClass="TimerViewController" customModule="ios_project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZKd-zc-IhV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,12 +141,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AZn-R8-ENk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="461" y="813"/>
+            <point key="canvasLocation" x="460.86956521739131" y="812.94642857142856"/>
         </scene>
         <!--Course View Controller-->
         <scene sceneID="jW7-D8-9qM">
             <objects>
-                <viewController storyboardIdentifier="page5" id="uJe-1Y-tHa" customClass="CourseViewController" customModule="ios_project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="course" modalPresentationStyle="fullScreen" id="uJe-1Y-tHa" customClass="CourseViewController" customModule="ios_project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sic-f1-qNS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -182,10 +182,11 @@
                         <viewLayoutGuide key="safeArea" id="tIA-Li-XaS"/>
                         <color key="backgroundColor" red="0.92420989269999998" green="0.86659115549999999" blue="0.82246667149999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="5qh-Rc-hvW">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="wwE-F2-Mrp">
+                    <navigationItem key="navigationItem" id="mnu-h8-D7f">
+                        <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="3e3-Xr-RBy">
                             <connections>
-                                <segue destination="hhC-bt-ZTY" kind="show" id="B4B-mu-ett"/>
+                                <segue destination="hhC-bt-ZTY" kind="show" identifier="addCourse" id="5kw-LA-58R"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -200,7 +201,7 @@
         <!--Add Workout View Controller-->
         <scene sceneID="WJk-gd-AbB">
             <objects>
-                <viewController storyboardIdentifier="page6" id="x64-GQ-VxC" customClass="AddWorkoutViewController" customModule="ios_project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addWorkout" modalPresentationStyle="fullScreen" id="x64-GQ-VxC" customClass="AddWorkoutViewController" customModule="ios_project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vZm-dI-SP7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -449,52 +450,104 @@
                     </view>
                     <navigationItem key="navigationItem" id="yuF-AC-YwW">
                         <nil key="title"/>
-                        <textField key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="zms-dV-SLE">
-                            <rect key="frame" x="132" y="5" width="150" height="34"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="MAs-8d-I8d"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" style="plain" id="vMF-JK-tNB">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ZRK-AY-whL">
+                                <rect key="frame" x="20" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backBtn:" destination="x64-GQ-VxC" eventType="touchUpInside" id="7l4-5v-Ita"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="MAs-8d-I8d">
+                            <connections>
+                                <segue destination="x64-GQ-VxC" kind="show" identifier="addWorkout" id="oQg-L3-RQE"/>
+                            </connections>
+                        </barButtonItem>
+                        <connections>
+                            <outlet property="rightBarButtonItem" destination="MAs-8d-I8d" id="R4z-Ed-B1k"/>
+                        </connections>
                     </navigationItem>
+                    <connections>
+                        <outlet property="info" destination="JPE-Qi-r6q" id="k0g-ej-lqT"/>
+                        <outlet property="name" destination="eG7-zh-Q2a" id="FbE-le-o60"/>
+                        <outlet property="restMilisec" destination="XQ9-c9-Xf3" id="qeA-Pi-iwI"/>
+                        <outlet property="restMin" destination="RfE-nH-9DL" id="mrg-Mp-syz"/>
+                        <outlet property="restSec" destination="lOc-jr-iEA" id="ljD-0R-IDv"/>
+                        <outlet property="set" destination="9Rc-gN-SkP" id="9mL-Vv-cRa"/>
+                        <outlet property="targetMilisec" destination="QIU-vj-W4G" id="E8z-ue-HsE"/>
+                        <outlet property="targetMin" destination="5JS-Bk-XHE" id="Hvj-uo-HtF"/>
+                        <outlet property="targetSec" destination="5xG-KS-hYI" id="IUX-04-k5H"/>
+                        <outlet property="timeMilisec" destination="tO7-lX-9Ap" id="FWe-GS-Fch"/>
+                        <outlet property="timeMin" destination="La7-61-RbN" id="IwD-Bb-egc"/>
+                        <outlet property="timeSec" destination="uQw-5I-gjj" id="add-49-nfo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l3f-8c-UKv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2746" y="-612"/>
+            <point key="canvasLocation" x="2794" y="-572"/>
         </scene>
         <!--Add Course View Controller-->
         <scene sceneID="JL8-6l-WKL">
             <objects>
-                <viewController id="hhC-bt-ZTY" customClass="AddCourseViewController" customModule="ios_project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addCourse" modalPresentationStyle="fullScreen" id="hhC-bt-ZTY" customClass="AddCourseViewController" customModule="ios_project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XgH-gX-JpP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QWd-4l-q1y">
+                                <rect key="frame" x="0.0" y="88" width="414" height="802"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="7bL-Mv-Q4s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="mnu-h8-D7f">
+                    <navigationItem key="navigationItem" id="shk-od-Cbs">
                         <nil key="title"/>
-                        <textField key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="DE8-Mf-K92">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="Qkq-9E-SNz">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="bos-FF-LA6">
+                                <rect key="frame" x="20" y="4.5" width="92" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backBtn:" destination="hhC-bt-ZTY" eventType="touchUpInside" id="8BM-3g-t2W"/>
+                                </connections>
+                            </button>
+                            <connections>
+                                <action selector="backBtn:" destination="hhC-bt-ZTY" id="0SP-JK-gPO"/>
+                            </connections>
+                        </barButtonItem>
+                        <textField key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="zWe-3v-wBn">
                             <rect key="frame" x="132" y="5" width="150" height="34"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="3e3-Xr-RBy">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="xl9-OU-xIc">
                             <connections>
-                                <segue destination="x64-GQ-VxC" kind="show" id="3g7-bh-AG7"/>
+                                <segue destination="x64-GQ-VxC" kind="show" identifier="addWorkout" id="PRe-HN-xG0"/>
                             </connections>
                         </barButtonItem>
+                        <connections>
+                            <outlet property="rightBarButtonItem" destination="xl9-OU-xIc" id="XrW-47-tKJ"/>
+                        </connections>
                     </navigationItem>
+                    <connections>
+                        <outlet property="courseName" destination="zWe-3v-wBn" id="qAm-UE-gBV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ee-Fs-Lif" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2062" y="-612"/>
+            <point key="canvasLocation" x="2031.8840579710147" y="-612.05357142857144"/>
         </scene>
         <!--Record View Controller-->
         <scene sceneID="Ldc-U7-Dne">
             <objects>
-                <viewController storyboardIdentifier="Page4" id="1oO-UF-GPD" customClass="RecordViewController" customModule="ios_project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="record" id="1oO-UF-GPD" customClass="RecordViewController" customModule="ios_project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g8e-c1-Hhx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -536,7 +589,7 @@
         <!--Menu View Controller-->
         <scene sceneID="KL9-mh-bkJ">
             <objects>
-                <viewController storyboardIdentifier="Page2" id="0YK-lw-wqL" customClass="MenuViewController" customModule="ios_project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="menu" id="0YK-lw-wqL" customClass="MenuViewController" customModule="ios_project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="Page2" id="m1i-Si-pvj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

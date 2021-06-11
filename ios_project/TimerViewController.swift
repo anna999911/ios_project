@@ -6,16 +6,22 @@
 //
 
 import UIKit
+import CoreData
 
 class TimerViewController: UIViewController {
-
+    
+    //CoreData setup
+    let app = UIApplication.shared.delegate as! AppDelegate
+    var viewContext: NSManagedObjectContext!
+    
+    //Storyboard variable
     @IBOutlet weak var redButton: UIImageView!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var record: UIButton!
-
- 
     @IBOutlet weak var usageInfoBtn: UIButton!
+    
+    //UI event
     @IBAction func howToUse(_ sender: UIButton)
     {
         alertUsageInfo()
@@ -31,10 +37,8 @@ class TimerViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-    
         super.viewDidLoad()
-       
-        // Do any additional setup after loading the view.
+        viewContext = app.persistentContainer.viewContext
     }
     
 

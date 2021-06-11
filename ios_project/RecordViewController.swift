@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import CoreData
 
 class RecordViewController: UIViewController {
 
-    
-    
+
+    //UI Event
     @IBAction func Edit(_ sender: UIBarButtonItem)
     {
     }

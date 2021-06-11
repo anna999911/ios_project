@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/t4-307/Desktop/ios_project/ios_project/ios_project.xcdatamodeld">
+   </FileRef>
+   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>

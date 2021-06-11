@@ -7,46 +7,47 @@
 
 import UIKit
 
-class AddCourseViewController: UIViewController {
-    
-    
-    @IBAction func addNew(_ sender: Any) {
-        alert()
-    }
-    
-
-    func alert(){
-    let alertController = UIAlertController(title: "課表名稱", message: "請輸入欲新增的課表名稱", preferredStyle: UIAlertController.Style.alert)
-    alertController.view.tintColor = UIColor.gray
-        alertController.addTextField{(textField) in
-            textField.text = "Input Name"}
-        
-    let butAction = UIAlertAction(title: "確定新增", style: UIAlertAction.Style.default, handler:nil)
-        
-    alertController.addAction(butAction)
-     
-   
-        
-    self.present(alertController, animated: true, completion: nil)
-    }
-    
-    
+class AddCourseViewController: UIViewController/*,UITableViewDelegate,UITableViewDataSource*/
+{
+    @IBOutlet weak var courseName: UITextField!
+    var workoutList: [Workout] = []
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
+    func addCourse()
+    {
+        CoreDataController.Instance()?.insertCourse(name: courseName.text!, workouts: workoutList)
+    }
 
+    
+    // MARK: - TableView
     /*
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+    }
+ */
+    
     // MARK: - Navigation
-
+    
+    @IBAction func backBtn(_ sender: UIButton) {
+        addCourse()
+        self.navigationController?.popViewController(animated: true);
+    }
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if(segue.identifier == "addWorkout")
+        {
+            let workoutPage = segue.destination as! AddWorkoutViewController
+        }
     }
-    */
+    
 
 }

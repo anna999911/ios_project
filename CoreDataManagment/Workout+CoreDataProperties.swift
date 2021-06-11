@@ -2,7 +2,7 @@
 //  Workout+CoreDataProperties.swift
 //  ios_project
 //
-//  Created by 陳宥儒 on 2021/6/11.
+//  Created by 陳宥儒 on 2021/6/12.
 //
 //
 
@@ -16,16 +16,16 @@ extension Workout {
         return NSFetchRequest<Workout>(entityName: "Workout")
     }
 
-    @NSManaged public var name: String?
-    @NSManaged public var set: Int16
-    @NSManaged public var info: String?
-    @NSManaged public var time: Float
-    @NSManaged public var target: Float
-    @NSManaged public var rest: Float
     @NSManaged public var id: UUID?
+    @NSManaged public var info: String?
+    @NSManaged public var name: String?
+    @NSManaged public var rest: Float
+    @NSManaged public var set: Int16
+    @NSManaged public var target: Float
+    @NSManaged public var time: Float
+    @NSManaged public var belongTo: Course?
     @NSManaged public var containWorkouts: NSOrderedSet?
     @NSManaged public var superWorkout: Workout?
-    @NSManaged public var belongTo: Course?
 
 }
 

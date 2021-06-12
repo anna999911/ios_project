@@ -32,7 +32,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Page1.png" translatesAutoresizingMaskIntoConstraints="NO" id="ezS-Eh-Mdt">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="beginPage.png" translatesAutoresizingMaskIntoConstraints="NO" id="ezS-Eh-Mdt">
                                 <rect key="frame" x="0.0" y="-134" width="426" height="1108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.92420989269999998" green="0.86659115549999999" blue="0.82246667149999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -49,8 +49,15 @@
                                     <segue destination="0YK-lw-wqL" kind="show" id="Uhu-XI-eJt"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="還沒有google帳號？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfo-WG-nYu">
+                                <rect key="frame" x="126" y="720" width="245" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5A-4P-pDl">
-                                <rect key="frame" x="140" y="317" width="134" height="44"/>
+                                <rect key="frame" x="116" y="319" width="183" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
@@ -61,13 +68,6 @@
                                     <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w9J-WT-kEp"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="還沒有google帳號？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfo-WG-nYu">
-                                <rect key="frame" x="126" y="720" width="175" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -80,9 +80,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-316" y="101"/>
+            <point key="canvasLocation" x="-317.39130434782612" y="100.44642857142857"/>
         </scene>
-        <!--Timer View Controller-->
+        <!--我的健身day-->
         <scene sceneID="Ddf-81-WDW">
             <objects>
                 <viewController storyboardIdentifier="timer" id="hKw-63-KGh" customClass="TimerViewController" customModule="ios_project" customModuleProvider="target" sceneMemberID="viewController">
@@ -90,35 +90,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="page3.png" translatesAutoresizingMaskIntoConstraints="NO" id="Q0w-xa-ggl">
-                                <rect key="frame" x="0.0" y="-45" width="416" height="907"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="timerPage.png" translatesAutoresizingMaskIntoConstraints="NO" id="Q0w-xa-ggl">
+                                <rect key="frame" x="-87" y="-206" width="603" height="1305"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86676669120000005" green="0.80945682529999996" blue="0.84229165319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Button_record.png" translatesAutoresizingMaskIntoConstraints="NO" id="iZ0-Is-lwO">
-                                <rect key="frame" x="111" y="618" width="192" height="136"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKP-jc-gch">
+                                <rect key="frame" x="95" y="248" width="283" height="490"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <state key="normal" image="startButton.png"/>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K18-l7-8zv">
-                                <rect key="frame" x="179" y="661" width="59" height="52"/>
+                                <rect key="frame" x="108" y="606" width="174" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal">
+                                <state key="normal" backgroundImage="Button_record.png">
                                     <color key="titleColor" red="0.8644714952" green="0.32175970079999999" blue="0.2253246605" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgB-8L-Dmt">
-                                <rect key="frame" x="287" y="640" width="127" height="51"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVD-Jq-74g">
+                                <rect key="frame" x="0.0" y="259" width="305" height="494"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4g-HC-F2L">
-                                <rect key="frame" x="20" y="639" width="104" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="stopButton.png"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="B2e-rZ-s10"/>
                         <color key="backgroundColor" red="0.5177149177" green="0.70334702729999998" blue="0.85710674519999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="sTF-2B-JkH">
+                    <navigationItem key="navigationItem" title="我的健身day" id="sTF-2B-JkH">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="UF9-Uj-jo7">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="3B8-wA-oa7">
                                 <rect key="frame" x="283" y="5" width="111" height="34"/>
@@ -133,9 +132,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="record" destination="K18-l7-8zv" id="ia9-uq-vZu"/>
-                        <outlet property="redButton" destination="iZ0-Is-lwO" id="nQQ-pe-wYJ"/>
-                        <outlet property="startButton" destination="MgB-8L-Dmt" id="bhn-xp-Z7G"/>
-                        <outlet property="stopButton" destination="v4g-HC-F2L" id="lep-B6-YeI"/>
                         <outlet property="usageInfoBtn" destination="3B8-wA-oa7" id="ODD-1b-DRZ"/>
                     </connections>
                 </viewController>
@@ -183,7 +179,6 @@
                         <color key="backgroundColor" red="0.92420989269999998" green="0.86659115549999999" blue="0.82246667149999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="mnu-h8-D7f">
-                        <nil key="title"/>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="3e3-Xr-RBy">
                             <connections>
                                 <segue destination="hhC-bt-ZTY" kind="show" identifier="addCourse" id="5kw-LA-58R"/>
@@ -521,7 +516,7 @@
                                 <action selector="backBtn:" destination="hhC-bt-ZTY" id="0SP-JK-gPO"/>
                             </connections>
                         </barButtonItem>
-                        <textField key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="zWe-3v-wBn">
+                        <textField key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="zWe-3v-wBn">
                             <rect key="frame" x="132" y="5" width="150" height="34"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -544,7 +539,7 @@
             </objects>
             <point key="canvasLocation" x="2031.8840579710147" y="-612.05357142857144"/>
         </scene>
-        <!--Record View Controller-->
+        <!--我的健身day-->
         <scene sceneID="Ldc-U7-Dne">
             <objects>
                 <viewController storyboardIdentifier="record" id="1oO-UF-GPD" customClass="RecordViewController" customModule="ios_project" customModuleProvider="target" sceneMemberID="viewController">
@@ -552,29 +547,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="page4.png" translatesAutoresizingMaskIntoConstraints="NO" id="aEj-yW-4Ek">
-                                <rect key="frame" x="0.0" y="56" width="414" height="806"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="recordPage.png" translatesAutoresizingMaskIntoConstraints="NO" id="aEj-yW-4Ek">
+                                <rect key="frame" x="0.0" y="88" width="414" height="806"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="健身數據紀錄" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttM-4E-2HV">
-                                <rect key="frame" x="118" y="105" width="200" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="記錄自己，每天進步多一點" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cj6-HX-QnT">
-                                <rect key="frame" x="90" y="162" width="257" height="26"/>
+                                <rect key="frame" x="79" y="159" width="257" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" red="0.93441969160000005" green="0.86668330429999996" blue="0.81582623720000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="健身記錄" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3VY-MZ-HU1">
+                                <rect key="frame" x="140" y="109" width="134" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ErM-ug-znB"/>
                         <color key="backgroundColor" red="0.1152957156" green="0.1202013567" blue="0.1034230366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Rdx-rw-GjI">
+                    <navigationItem key="navigationItem" title="我的健身day" id="Rdx-rw-GjI">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="edit" id="yoX-EC-WZ2">
                             <connections>
                                 <action selector="Edit:" destination="1oO-UF-GPD" id="xpR-Mb-vir"/>
@@ -584,9 +579,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MWJ-DW-Ikm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1345" y="119"/>
+            <point key="canvasLocation" x="1457" y="132"/>
         </scene>
-        <!--Menu View Controller-->
+        <!--我的健身day-->
         <scene sceneID="KL9-mh-bkJ">
             <objects>
                 <viewController storyboardIdentifier="menu" id="0YK-lw-wqL" customClass="MenuViewController" customModule="ios_project" customModuleProvider="target" sceneMemberID="viewController">
@@ -594,37 +589,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="page2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zvg-HM-CUD">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="menuPage.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zvg-HM-CUD">
                                 <rect key="frame" x="-204" y="90" width="822" height="743"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQd-VD-ceB">
-                                <rect key="frame" x="44" y="456" width="334" height="44"/>
+                                <rect key="frame" x="62" y="411" width="290" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="查看紀錄">
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="查看紀錄" backgroundImage="menuButton.png">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="1oO-UF-GPD" kind="show" id="90Q-gd-Axp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xuz-QO-OxK">
-                                <rect key="frame" x="44" y="351" width="334" height="51"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xuz-QO-OxK">
+                                <rect key="frame" x="62" y="294" width="290" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="選擇課表">
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="選擇課表" backgroundImage="menuButton.png">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="uJe-1Y-tHa" kind="show" id="HVB-xT-7XY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ev-y9-9Q8">
-                                <rect key="frame" x="44" y="564" width="334" height="44"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPo-jI-LAW">
+                                <rect key="frame" x="121" y="160" width="171" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="計時器">
+                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                <color key="textColor" red="0.86676669120000005" green="0.80945682529999996" blue="0.84229165319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ev-y9-9Q8">
+                                <rect key="frame" x="62" y="535" width="290" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="計時器" backgroundImage="menuButton.png">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -635,7 +637,7 @@
                         <viewLayoutGuide key="safeArea" id="WdW-i6-nq3"/>
                         <color key="backgroundColor" red="0.1458024383" green="0.21922254560000001" blue="0.19928324219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="KMH-u9-rVW"/>
+                    <navigationItem key="navigationItem" title="我的健身day" id="KMH-u9-rVW"/>
                     <connections>
                         <outlet property="before" destination="XQd-VD-ceB" id="dfb-hJ-fTg"/>
                         <outlet property="chosseCourse" destination="Xuz-QO-OxK" id="d1i-yK-csg"/>
@@ -644,17 +646,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPb-x5-3gb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="462" y="100"/>
+            <point key="canvasLocation" x="460.86956521739131" y="99.776785714285708"/>
         </scene>
     </scenes>
     <resources>
         <image name="Button_record.png" width="300" height="300"/>
-        <image name="Page1.png" width="810" height="1440"/>
-        <image name="page2.png" width="810" height="1440"/>
-        <image name="page3.png" width="810" height="1440"/>
-        <image name="page4.png" width="810" height="1440"/>
+        <image name="beginPage.png" width="810" height="1440"/>
+        <image name="menuButton.png" width="217" height="71"/>
+        <image name="menuPage.png" width="810" height="1440"/>
+        <image name="recordPage.png" width="810" height="1440"/>
+        <image name="startButton.png" width="375" height="666"/>
+        <image name="stopButton.png" width="375" height="666"/>
+        <image name="timerPage.png" width="810" height="1440"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

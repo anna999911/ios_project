@@ -11,6 +11,7 @@ class AddWorkoutViewController: UIViewController {
     
     var workoutList: [Workout] = []
     var addWorkPage: AddWorkoutViewController!
+    var addCoursePage: AddCourseViewController!
     //StoryBoard variable
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var set: UITextField!
@@ -44,10 +45,8 @@ class AddWorkoutViewController: UIViewController {
         {
             addWorkPage.workoutList.append(workout)
         }
-        else
+        else if addCoursePage != nil
         {
-            let i: Int? = self.navigationController?.viewControllers.endIndex
-            let addCoursePage = self.navigationController?.viewControllers[i!-2] as! AddCourseViewController
             addCoursePage.workoutList.append(workout)
         }
 

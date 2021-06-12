@@ -46,6 +46,7 @@ class AddCourseViewController: UIViewController/*,UITableViewDelegate,UITableVie
         if(segue.identifier == "addWorkout")
         {
             let workoutPage = segue.destination as! AddWorkoutViewController
+            workoutPage.addCoursePage = self
         }
     }
     

@@ -18,13 +18,13 @@
 		95307ADD2663DFDF0066A156 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95307ADC2663DFDE0066A156 /* MenuViewController.swift */; };
 		95307AE22663E2760066A156 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95307AE12663E2760066A156 /* TimerViewController.swift */; };
 		953E1B7E2675BF1F008F5119 /* beginPageImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 953E1B7C2675BF1F008F5119 /* beginPageImage.jpg */; };
-		953E1B7F2675BF1F008F5119 /* beginPage.png in Resources */ = {isa = PBXBuildFile; fileRef = 953E1B7D2675BF1F008F5119 /* beginPage.png */; };
-		953E1B872675BFF9008F5119 /* recordPage.png in Resources */ = {isa = PBXBuildFile; fileRef = 953E1B862675BFF8008F5119 /* recordPage.png */; };
-		9572B355267511370032F083 /* startButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9572B353267511360032F083 /* startButton.png */; };
-		9572B356267511370032F083 /* stopButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9572B354267511360032F083 /* stopButton.png */; };
-		9572B35B267511550032F083 /* timerPage.png in Resources */ = {isa = PBXBuildFile; fileRef = 9572B35A267511540032F083 /* timerPage.png */; };
-		9572B36D267514100032F083 /* menuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9572B36C267514100032F083 /* menuButton.png */; };
-		9572B372267514390032F083 /* menuPage.png in Resources */ = {isa = PBXBuildFile; fileRef = 9572B371267514390032F083 /* menuPage.png */; };
+		953E1B95267610F1008F5119 /* startButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 953E1B8E267610F0008F5119 /* startButton.png */; };
+		953E1B96267610F1008F5119 /* beginPage.png in Resources */ = {isa = PBXBuildFile; fileRef = 953E1B8F267610F0008F5119 /* beginPage.png */; };
+		953E1B97267610F1008F5119 /* stopButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 953E1B90267610F0008F5119 /* stopButton.png */; };
+		953E1B98267610F1008F5119 /* menuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 953E1B91267610F1008F5119 /* menuButton.png */; };
+		953E1B99267610F1008F5119 /* recordPage.png in Resources */ = {isa = PBXBuildFile; fileRef = 953E1B92267610F1008F5119 /* recordPage.png */; };
+		953E1B9A267610F1008F5119 /* timerPage.png in Resources */ = {isa = PBXBuildFile; fileRef = 953E1B93267610F1008F5119 /* timerPage.png */; };
+		953E1B9B267610F1008F5119 /* menuPage.png in Resources */ = {isa = PBXBuildFile; fileRef = 953E1B94267610F1008F5119 /* menuPage.png */; };
 		95A3EA16266528390086B0A1 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A3EA15266528390086B0A1 /* RecordViewController.swift */; };
 		95A3EA3226675DD20086B0A1 /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A3EA3126675DD20086B0A1 /* CourseViewController.swift */; };
 		95A3EA3D26676F640086B0A1 /* AddCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A3EA3C26676F640086B0A1 /* AddCourseViewController.swift */; };
@@ -72,13 +72,13 @@
 		95307ADC2663DFDE0066A156 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		95307AE12663E2760066A156 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		953E1B7C2675BF1F008F5119 /* beginPageImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beginPageImage.jpg; sourceTree = "<group>"; };
-		953E1B7D2675BF1F008F5119 /* beginPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = beginPage.png; path = ../../../../../Desktop/beginPage.png; sourceTree = "<group>"; };
-		953E1B862675BFF8008F5119 /* recordPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recordPage.png; path = ../../../../../Desktop/recordPage.png; sourceTree = "<group>"; };
-		9572B353267511360032F083 /* startButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = startButton.png; path = ../../../../../Desktop/startButton.png; sourceTree = "<group>"; };
-		9572B354267511360032F083 /* stopButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stopButton.png; path = ../../../../../Desktop/stopButton.png; sourceTree = "<group>"; };
-		9572B35A267511540032F083 /* timerPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = timerPage.png; path = ../../../../../Desktop/timerPage.png; sourceTree = "<group>"; };
-		9572B36C267514100032F083 /* menuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menuButton.png; path = ../../../../../Desktop/menuButton.png; sourceTree = "<group>"; };
-		9572B371267514390032F083 /* menuPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menuPage.png; path = ../../../../../Desktop/menuPage.png; sourceTree = "<group>"; };
+		953E1B8E267610F0008F5119 /* startButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startButton.png; sourceTree = "<group>"; };
+		953E1B8F267610F0008F5119 /* beginPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beginPage.png; sourceTree = "<group>"; };
+		953E1B90267610F0008F5119 /* stopButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stopButton.png; sourceTree = "<group>"; };
+		953E1B91267610F1008F5119 /* menuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuButton.png; sourceTree = "<group>"; };
+		953E1B92267610F1008F5119 /* recordPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recordPage.png; sourceTree = "<group>"; };
+		953E1B93267610F1008F5119 /* timerPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timerPage.png; sourceTree = "<group>"; };
+		953E1B94267610F1008F5119 /* menuPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuPage.png; sourceTree = "<group>"; };
 		95A3EA15266528390086B0A1 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		95A3EA3126675DD20086B0A1 /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
 		95A3EA3C26676F640086B0A1 /* AddCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCourseViewController.swift; sourceTree = "<group>"; };
@@ -185,14 +185,14 @@
 		95A3EA4E26687E870086B0A1 /* image */ = {
 			isa = PBXGroup;
 			children = (
-				953E1B7D2675BF1F008F5119 /* beginPage.png */,
 				953E1B7C2675BF1F008F5119 /* beginPageImage.jpg */,
-				9572B35A267511540032F083 /* timerPage.png */,
-				9572B353267511360032F083 /* startButton.png */,
-				9572B354267511360032F083 /* stopButton.png */,
-				9572B371267514390032F083 /* menuPage.png */,
-				9572B36C267514100032F083 /* menuButton.png */,
-				953E1B862675BFF8008F5119 /* recordPage.png */,
+				953E1B8F267610F0008F5119 /* beginPage.png */,
+				953E1B91267610F1008F5119 /* menuButton.png */,
+				953E1B94267610F1008F5119 /* menuPage.png */,
+				953E1B92267610F1008F5119 /* recordPage.png */,
+				953E1B8E267610F0008F5119 /* startButton.png */,
+				953E1B90267610F0008F5119 /* stopButton.png */,
+				953E1B93267610F1008F5119 /* timerPage.png */,
 				95A3EA4F26687EB70086B0A1 /* Button_record.png */,
 			);
 			path = image;
@@ -301,17 +301,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				953E1B96267610F1008F5119 /* beginPage.png in Resources */,
 				95307AB1265FE1F10066A156 /* LaunchScreen.storyboard in Resources */,
 				95307AAE265FE1F10066A156 /* Assets.xcassets in Resources */,
-				953E1B7F2675BF1F008F5119 /* beginPage.png in Resources */,
-				9572B35B267511550032F083 /* timerPage.png in Resources */,
-				9572B36D267514100032F083 /* menuButton.png in Resources */,
-				953E1B872675BFF9008F5119 /* recordPage.png in Resources */,
-				9572B355267511370032F083 /* startButton.png in Resources */,
+				953E1B9A267610F1008F5119 /* timerPage.png in Resources */,
+				953E1B98267610F1008F5119 /* menuButton.png in Resources */,
 				95307AA9265FE1ED0066A156 /* Main.storyboard in Resources */,
-				9572B356267511370032F083 /* stopButton.png in Resources */,
-				9572B372267514390032F083 /* menuPage.png in Resources */,
+				953E1B95267610F1008F5119 /* startButton.png in Resources */,
+				953E1B99267610F1008F5119 /* recordPage.png in Resources */,
 				953E1B7E2675BF1F008F5119 /* beginPageImage.jpg in Resources */,
+				953E1B97267610F1008F5119 /* stopButton.png in Resources */,
+				953E1B9B267610F1008F5119 /* menuPage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

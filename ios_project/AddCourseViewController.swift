@@ -31,11 +31,11 @@ class AddCourseViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     func addCourse()
     {
-        currentCourse = CoreDataController.Instance()?.insertCourse(name: courseName.text!, workouts: [])
+        currentCourse = CoreDataController.Instance()?.insertCourse(name: courseName.text!)
     }
     func editCourse()
     {
-        CoreDataController.Instance()?.editCourse(courseID: currentCourse.cid!, name: courseName.text, workouts: [])
+        CoreDataController.Instance()?.editCourse(courseID: currentCourse.cid!, name: courseName.text)
     }
     
     // MARK: - TableView

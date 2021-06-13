@@ -31,19 +31,15 @@ class CoreDataController
         print(NSPersistentContainer.defaultDirectoryURL())
     }
     
-    public func insertCourse(name: String?, workouts: [Workout]) -> Course!
+    public func insertCourse(name: String?) -> Course!
     {
         let course = NSEntityDescription.insertNewObject(forEntityName: "Course", into: viewContext) as! Course
         course.cid = UUID.init()
         course.name = name
-        for workout in workouts
-        {
-            course.addToContainWorkouts(workout)
-        }
 
         return course
     }
-    public func insertWorkout(name: String?, set: Int16, time: Float, target: Float, rest: Float, info: String?, workouts: [Workout]) -> Workout!
+    public func insertWorkout(name: String?, set: Int16, time: Float, target: Float, rest: Float, info: String?) -> Workout!
     {
         let workout = NSEntityDescription.insertNewObject(forEntityName: "Workout", into: viewContext) as! Workout
         workout.wid = UUID.init()
@@ -54,18 +50,13 @@ class CoreDataController
         workout.rest = rest
         workout.info = info
         
-        for w in workouts
-        {
-            workout.addToContainWorkouts(w)
-        }
-        
         return workout
     }
     public func insertWorkout(workout: Workout) -> Workout!
     {
         let w: Workout! = workout
         
-        return insertWorkout(name: w.name, set: w.set, time: w.time, target: w.target, rest: w.rest, info: w.info, workouts: w.containWorkouts?.array as! [Workout])
+        return insertWorkout(name: w.name, set: w.set, time: w.time, target: w.target, rest: w.rest, info: w.info)
     }
     public func getCourseList() ->[Course]
     {
@@ -135,28 +126,21 @@ class CoreDataController
             return workout
         }
     }
-    public func editCourse(courseID: UUID, name: String?, workouts: [Workout])
+    public func editCourse(courseID: UUID, name: String?)
     {
         let course: Course! = getCourse(courseID: courseID)
         
         if(course != nil)
         {
             course.name = name
-            /*
-            course.removeFromContainWorkouts(course.containWorkouts!)
-            for w in workouts
-            {
-                course.addToContainWorkouts(w)
-            }
-             */
             app.saveContext()
         }
     }
     public func editCourse(courseID: UUID, _course: Course)
     {
-        editCourse(courseID: courseID, name: _course.name, workouts: _course.containWorkouts?.array as! [Workout])
+        editCourse(courseID: courseID, name: _course.name)
     }
-    public func editWorkout(workoutID: UUID, name: String?, set: Int16, time: Float, target: Float, rest: Float, info: String?, workouts: [Workout])
+    public func editWorkout(workoutID: UUID, name: String?, set: Int16, time: Float, target: Float, rest: Float, info: String?)
     {
         let workout: Workout! = getWorkout(workoutID: workoutID)
         if workout != nil
@@ -167,18 +151,11 @@ class CoreDataController
             workout.target = target
             workout.rest = rest
             workout.info = info
-            /*
-            workout.removeFromContainWorkouts(workout.containWorkouts!)
-            for w in workouts
-            {
-                workout.addToContainWorkouts(w)
-            }
-             */
         }
     }
     public func editWorkout(workoutID: UUID, _workout: Workout)
     {
-        editWorkout(workoutID: workoutID, name: _workout.name, set: _workout.set, time: _workout.time, target: _workout.target, rest: _workout.rest, info: _workout.info, workouts: _workout.containWorkouts?.array as! [Workout])
+        editWorkout(workoutID: workoutID, name: _workout.name, set: _workout.set, time: _workout.time, target: _workout.target, rest: _workout.rest, info: _workout.info)
     }
     public func deleteCourse(courseID: UUID)
     {
@@ -195,7 +172,6 @@ class CoreDataController
         if  w != nil
         {
             viewContext.delete(w)
-            //app.saveContext()
         }
     }
     public func addCourseContainWorkout(courseID: UUID, wID: UUID)

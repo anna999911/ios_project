@@ -40,7 +40,7 @@ class AddWorkoutViewController: UIViewController, UITableViewDelegate, UITableVi
         isNew = currentWorkout == nil
         fromW = addWorkPage != nil
         fromC = addCoursePage != nil
-        superID = (fromW) ? addWorkPage.currentWorkout.wid : addCoursePage.currentCourse.cid
+        superID = (fromW) ? addWorkPage.currentWorkout.wid : (fromC) ? addCoursePage.currentCourse.cid : nil
         if !isNew
         {
             navigationController?.title = currentWorkout.name
@@ -71,7 +71,7 @@ class AddWorkoutViewController: UIViewController, UITableViewDelegate, UITableVi
         let time: Float = Float(timeMin.text!)!*Float(60) + Float(timeSec.text!)! + Float(0.01)*Float(timeMilisec.text!)!
         let target: Float = Float(targetMin.text!)!*Float(60) + Float(targetSec.text!)! + Float(0.01)*Float(targetMilisec.text!)!
         let rest: Float = Float(restMin.text!)!*Float(60) + Float(restSec.text!)! + Float(0.01)*Float(restMilisec.text!)!
-        currentWorkout = (CoreDataController.Instance()?.insertWorkout(name: name.text!, set: Int16(Int(set.text!)!), time: time, target: target, rest: rest, info: info.text!, workouts: []))
+        currentWorkout = (CoreDataController.Instance()?.insertWorkout(name: name.text!, set: Int16(Int(set.text!)!), time: time, target: target, rest: rest, info: info.text!))
         addContainWorkouts()
     }
     func editWorkout()
@@ -79,7 +79,7 @@ class AddWorkoutViewController: UIViewController, UITableViewDelegate, UITableVi
         let time: Float = Float(timeMin.text!)!*Float(60) + Float(timeSec.text!)! + Float(0.01)*Float(timeMilisec.text!)!
         let target: Float = Float(targetMin.text!)!*Float(60) + Float(targetSec.text!)! + Float(0.01)*Float(targetMilisec.text!)!
         let rest: Float = Float(restMin.text!)!*Float(60) + Float(restSec.text!)! + Float(0.01)*Float(restMilisec.text!)!
-        CoreDataController.Instance()?.editWorkout(workoutID: currentWorkout.wid!, name: name.text!, set: Int16(Int(set.text!)!), time: time, target: target, rest: rest, info: info.text!, workouts: [])
+        CoreDataController.Instance()?.editWorkout(workoutID: currentWorkout.wid!, name: name.text!, set: Int16(Int(set.text!)!), time: time, target: target, rest: rest, info: info.text!)
     }
     func showWorkout()
     {

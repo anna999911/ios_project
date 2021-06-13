@@ -2,7 +2,7 @@
 //  Course+CoreDataProperties.swift
 //  ios_project
 //
-//  Created by 陳宥儒 on 2021/6/12.
+//  Created by 陳宥儒 on 2021/6/14.
 //
 //
 
@@ -16,7 +16,7 @@ extension Course {
         return NSFetchRequest<Course>(entityName: "Course")
     }
 
-    @NSManaged public var id: UUID?
+    @NSManaged public var cid: UUID?
     @NSManaged public var name: String?
     @NSManaged public var containWorkouts: NSOrderedSet?
 

@@ -11,42 +11,49 @@ class CourseViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.isEditing = true
-        tableView.allowsSelection = true
         // Do any additional setup after loading the view.
     }
+    
     //MARK: - TableView
     
-    var names = ["1","2","3","4"]
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var courseListTable: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return names.count
+        return (CoreDataController.Instance()?.getCourseList())!.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell=tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text=names[indexPath.row]
+        print(indexPath.row)
+        let cell = courseListTable.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = CoreDataController.Instance()?.getCourseList()[indexPath.row].name
         
         return cell
     }
-    
 
     func tableView(_ tableView:UITableView,editingStyleForRowAt indexPath:IndexPath) ->UITableViewCell.EditingStyle{
-        return.none
+        return .none
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
-            names.remove(at: indexPath.row)
+            //courseList.remove(at: indexPath.row)
             
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            tableView.reloadData()
+            //tableView.deleteRows(at: [indexPath], with: .fade)
+            //tableView.reloadData()
         }
         else if editingStyle == .insert{
             
         }
     }
-   
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let addCourseView = storyboard?.instantiateViewController(identifier: "addCourse")
+        {
+            let v = addCourseView as! AddCourseViewController
+            v.coursePage = self
+            v.currentCourse = CoreDataController.Instance()?.getCourseList()[indexPath.row]
+            show(v, sender: self)
+        }
+    }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -56,6 +63,7 @@ class CourseViewController: UIViewController,UITableViewDelegate,UITableViewData
         if(segue.identifier == "addCourse")
         {
             let coursePage = segue.destination as! AddCourseViewController
+            coursePage.coursePage = self
         }
     }
     

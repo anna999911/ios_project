@@ -68,6 +68,10 @@
                                     <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w9J-WT-kEp"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="beginPageImage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pWa-Lu-rij">
+                                <rect key="frame" x="39" y="442" width="351" height="201"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -652,6 +656,7 @@
     <resources>
         <image name="Button_record.png" width="300" height="300"/>
         <image name="beginPage.png" width="810" height="1440"/>
+        <image name="beginPageImage.jpg" width="192" height="128"/>
         <image name="menuButton.png" width="217" height="71"/>
         <image name="menuPage.png" width="810" height="1440"/>
         <image name="recordPage.png" width="810" height="1440"/>

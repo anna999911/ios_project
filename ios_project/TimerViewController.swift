@@ -19,8 +19,6 @@ class TimerViewController: UIViewController, UITableViewDelegate,UITableViewData
                 clickLapButton.setTitleColor(.lightGray, for: .normal)
         
     }
-    
-    
     var startStatus = true
        var canLapStatus = false
        var millSeconds = 0
@@ -40,8 +38,7 @@ class TimerViewController: UIViewController, UITableViewDelegate,UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "stopWatchCell", for: indexPath)
-        
-        cell.textLabel?.text = "\(stopWatches[indexPath.row])"
+        cell.textLabel?.text = "\(stopWatches.count-indexPath.row).   \(stopWatches[indexPath.row])"
     
         return cell
                 

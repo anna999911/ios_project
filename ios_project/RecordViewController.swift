@@ -37,7 +37,7 @@ class RecordViewController: UIViewController {
         formatter.dateFormat = "yyyy-MM-dd"
         let fromDateTime = formatter.date(from: "2019-01-02")
         myDatePicker.minimumDate = fromDateTime
-        let endDateTime = formatter.date(from: "2020-06-10")
+        let endDateTime = formatter.date(from: "2020-06-16")
         myDatePicker.maximumDate = endDateTime
         myDatePicker.locale = NSLocale(
             localeIdentifier: "zh_TW") as Locale

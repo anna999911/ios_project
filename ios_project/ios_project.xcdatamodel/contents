@@ -4,6 +4,15 @@
         <attribute name="cid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="containWorkouts" toMany="YES" minCount="1" deletionRule="Cascade" ordered="YES" destinationEntity="Workout" inverseName="belongTo" inverseEntity="Workout"/>
+        <relationship name="records" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Record" inverseName="course" inverseEntity="Record"/>
+    </entity>
+    <entity name="Record" representedClassName="Record" syncable="YES">
+        <attribute name="date" attributeType="String" defaultValueString="2021-01-01"/>
+        <attribute name="lap" attributeType="Integer 16" minValueString="0" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="set" optional="YES" attributeType="Integer 16" minValueString="1" defaultValueString="1" usesScalarValueType="YES"/>
+        <attribute name="time" optional="YES" attributeType="Float" minValueString="0" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="course" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="records" inverseEntity="Course"/>
+        <relationship name="workout" maxCount="1" deletionRule="Nullify" destinationEntity="Workout" inverseName="records" inverseEntity="Workout"/>
     </entity>
     <entity name="Workout" representedClassName="Workout" syncable="YES">
         <attribute name="info" optional="YES" attributeType="String"/>
@@ -15,10 +24,12 @@
         <attribute name="wid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <relationship name="belongTo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="containWorkouts" inverseEntity="Course"/>
         <relationship name="containWorkouts" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Workout" inverseName="superWorkout" inverseEntity="Workout"/>
+        <relationship name="records" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Record" inverseName="workout" inverseEntity="Record"/>
         <relationship name="superWorkout" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Workout" inverseName="containWorkouts" inverseEntity="Workout"/>
     </entity>
     <elements>
-        <element name="Course" positionX="-45" positionY="0" width="128" height="88"/>
-        <element name="Workout" positionX="-401" positionY="-9" width="93" height="193"/>
+        <element name="Course" positionX="-45" positionY="0" width="128" height="103"/>
+        <element name="Record" positionX="-207" positionY="201" width="128" height="133"/>
+        <element name="Workout" positionX="-401" positionY="-9" width="93" height="208"/>
     </elements>
 </model>

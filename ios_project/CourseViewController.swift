@@ -23,34 +23,32 @@ class CourseViewController: UIViewController,UITableViewDelegate,UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print(indexPath.row)
         let cell = courseListTable.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = CoreDataController.Instance()?.getCourseList()[indexPath.row].name
         
         return cell
     }
-
-    func tableView(_ tableView:UITableView,editingStyleForRowAt indexPath:IndexPath) ->UITableViewCell.EditingStyle{
-        return .none
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
     }
-    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete{
-            //courseList.remove(at: indexPath.row)
-            
-            //tableView.deleteRows(at: [indexPath], with: .fade)
-            //tableView.reloadData()
-        }
-        else if editingStyle == .insert{
-            
+        if editingStyle == .delete
+        {
+            if let addCourseView = storyboard?.instantiateViewController(identifier: "addCourse")
+            {
+                let v = addCourseView as! AddCourseViewController
+                v.coursePage = self
+                v.currentCourse = CoreDataController.Instance()?.getCourseList()[indexPath.row]
+                show(v, sender: self)
+            }
         }
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let addCourseView = storyboard?.instantiateViewController(identifier: "addCourse")
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        if let stopwatchView = storyboard?.instantiateViewController(identifier: "timer")
         {
-            let v = addCourseView as! AddCourseViewController
-            v.coursePage = self
-            v.currentCourse = CoreDataController.Instance()?.getCourseList()[indexPath.row]
+            let v = stopwatchView as! TimerViewController
+            v.courseID = CoreDataController.Instance()?.getCourseList()[indexPath.row].cid
             show(v, sender: self)
         }
     }

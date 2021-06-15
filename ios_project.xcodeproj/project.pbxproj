@@ -27,15 +27,18 @@
 		95A3EA3D26676F640086B0A1 /* AddCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A3EA3C26676F640086B0A1 /* AddCourseViewController.swift */; };
 		BB3EDBB02672983C00069FE4 /* AddWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3EDBAF2672983C00069FE4 /* AddWorkoutViewController.swift */; };
 		BB3EDBE62673980C00069FE4 /* ios_project.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = BB3EDBE52673980C00069FE4 /* ios_project.xcdatamodel */; };
-		BB3EDBF12673987000069FE4 /* Workout+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3EDBED2673987000069FE4 /* Workout+CoreDataClass.swift */; };
-		BB3EDBF22673987000069FE4 /* Workout+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3EDBEE2673987000069FE4 /* Workout+CoreDataProperties.swift */; };
-		BB3EDBF32673987000069FE4 /* Course+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3EDBEF2673987000069FE4 /* Course+CoreDataClass.swift */; };
-		BB3EDBF42673987000069FE4 /* Course+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3EDBF02673987000069FE4 /* Course+CoreDataProperties.swift */; };
 		BB3EDBF92673CC3500069FE4 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3EDBF82673CC3500069FE4 /* CoreDataController.swift */; };
 		BB3EDC0C26761C5D00069FE4 /* stopButton.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BB3EDC0826761C5D00069FE4 /* stopButton.jpeg */; };
 		BB3EDC0D26761C5D00069FE4 /* menuButton.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BB3EDC0926761C5D00069FE4 /* menuButton.jpeg */; };
 		BB3EDC0E26761C5D00069FE4 /* Button_record.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BB3EDC0A26761C5D00069FE4 /* Button_record.jpeg */; };
 		BB3EDC0F26761C5D00069FE4 /* startButton.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BB3EDC0B26761C5D00069FE4 /* startButton.jpeg */; };
+		BB3EDC172677451800069FE4 /* StopWatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3EDC162677451700069FE4 /* StopWatchController.swift */; };
+		BB3EDC432679068700069FE4 /* Course+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3EDC3D2679068700069FE4 /* Course+CoreDataClass.swift */; };
+		BB3EDC442679068700069FE4 /* Course+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3EDC3E2679068700069FE4 /* Course+CoreDataProperties.swift */; };
+		BB3EDC452679068700069FE4 /* Record+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3EDC3F2679068700069FE4 /* Record+CoreDataClass.swift */; };
+		BB3EDC462679068700069FE4 /* Record+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3EDC402679068700069FE4 /* Record+CoreDataProperties.swift */; };
+		BB3EDC472679068700069FE4 /* Workout+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3EDC412679068700069FE4 /* Workout+CoreDataClass.swift */; };
+		BB3EDC482679068700069FE4 /* Workout+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3EDC422679068700069FE4 /* Workout+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,15 +85,18 @@
 		95A3EA3C26676F640086B0A1 /* AddCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCourseViewController.swift; sourceTree = "<group>"; };
 		BB3EDBAF2672983C00069FE4 /* AddWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutViewController.swift; sourceTree = "<group>"; };
 		BB3EDBE52673980C00069FE4 /* ios_project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ios_project.xcdatamodel; sourceTree = "<group>"; };
-		BB3EDBED2673987000069FE4 /* Workout+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Workout+CoreDataClass.swift"; path = "CoreDataManagment/Workout+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BB3EDBEE2673987000069FE4 /* Workout+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Workout+CoreDataProperties.swift"; path = "CoreDataManagment/Workout+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BB3EDBEF2673987000069FE4 /* Course+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Course+CoreDataClass.swift"; path = "CoreDataManagment/Course+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BB3EDBF02673987000069FE4 /* Course+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Course+CoreDataProperties.swift"; path = "CoreDataManagment/Course+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BB3EDBF82673CC3500069FE4 /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		BB3EDC0826761C5D00069FE4 /* stopButton.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stopButton.jpeg; sourceTree = "<group>"; };
 		BB3EDC0926761C5D00069FE4 /* menuButton.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = menuButton.jpeg; sourceTree = "<group>"; };
 		BB3EDC0A26761C5D00069FE4 /* Button_record.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Button_record.jpeg; sourceTree = "<group>"; };
 		BB3EDC0B26761C5D00069FE4 /* startButton.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = startButton.jpeg; sourceTree = "<group>"; };
+		BB3EDC162677451700069FE4 /* StopWatchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchController.swift; sourceTree = "<group>"; };
+		BB3EDC3D2679068700069FE4 /* Course+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Course+CoreDataClass.swift"; path = "CoreDataManagment/Course+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BB3EDC3E2679068700069FE4 /* Course+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Course+CoreDataProperties.swift"; path = "CoreDataManagment/Course+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BB3EDC3F2679068700069FE4 /* Record+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Record+CoreDataClass.swift"; path = "CoreDataManagment/Record+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BB3EDC402679068700069FE4 /* Record+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Record+CoreDataProperties.swift"; path = "CoreDataManagment/Record+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BB3EDC412679068700069FE4 /* Workout+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Workout+CoreDataClass.swift"; path = "CoreDataManagment/Workout+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BB3EDC422679068700069FE4 /* Workout+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Workout+CoreDataProperties.swift"; path = "CoreDataManagment/Workout+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,10 +127,12 @@
 		95307A95265FE1ED0066A156 = {
 			isa = PBXGroup;
 			children = (
-				BB3EDBED2673987000069FE4 /* Workout+CoreDataClass.swift */,
-				BB3EDBEE2673987000069FE4 /* Workout+CoreDataProperties.swift */,
-				BB3EDBEF2673987000069FE4 /* Course+CoreDataClass.swift */,
-				BB3EDBF02673987000069FE4 /* Course+CoreDataProperties.swift */,
+				BB3EDC3D2679068700069FE4 /* Course+CoreDataClass.swift */,
+				BB3EDC3E2679068700069FE4 /* Course+CoreDataProperties.swift */,
+				BB3EDC3F2679068700069FE4 /* Record+CoreDataClass.swift */,
+				BB3EDC402679068700069FE4 /* Record+CoreDataProperties.swift */,
+				BB3EDC412679068700069FE4 /* Workout+CoreDataClass.swift */,
+				BB3EDC422679068700069FE4 /* Workout+CoreDataProperties.swift */,
 				95307AA0265FE1ED0066A156 /* ios_project */,
 				95307AC5265FE1F10066A156 /* ios_projectUITests */,
 				95307A9F265FE1ED0066A156 /* Products */,
@@ -161,6 +169,7 @@
 				95A3EA3C26676F640086B0A1 /* AddCourseViewController.swift */,
 				BB3EDBAF2672983C00069FE4 /* AddWorkoutViewController.swift */,
 				BB3EDBF82673CC3500069FE4 /* CoreDataController.swift */,
+				BB3EDC162677451700069FE4 /* StopWatchController.swift */,
 			);
 			path = ios_project;
 			sourceTree = "<group>";
@@ -338,21 +347,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB3EDBF42673987000069FE4 /* Course+CoreDataProperties.swift in Sources */,
+				BB3EDC482679068700069FE4 /* Workout+CoreDataProperties.swift in Sources */,
+				BB3EDC472679068700069FE4 /* Workout+CoreDataClass.swift in Sources */,
+				BB3EDC442679068700069FE4 /* Course+CoreDataProperties.swift in Sources */,
 				95A3EA16266528390086B0A1 /* RecordViewController.swift in Sources */,
 				BB3EDBF92673CC3500069FE4 /* CoreDataController.swift in Sources */,
+				BB3EDC452679068700069FE4 /* Record+CoreDataClass.swift in Sources */,
+				BB3EDC462679068700069FE4 /* Record+CoreDataProperties.swift in Sources */,
 				95A3EA3D26676F640086B0A1 /* AddCourseViewController.swift in Sources */,
 				95307AA6265FE1ED0066A156 /* ViewController.swift in Sources */,
+				BB3EDC172677451800069FE4 /* StopWatchController.swift in Sources */,
 				BB3EDBE62673980C00069FE4 /* ios_project.xcdatamodel in Sources */,
 				95307ADD2663DFDF0066A156 /* MenuViewController.swift in Sources */,
 				95307AA2265FE1ED0066A156 /* AppDelegate.swift in Sources */,
-				BB3EDBF22673987000069FE4 /* Workout+CoreDataProperties.swift in Sources */,
 				95A3EA3226675DD20086B0A1 /* CourseViewController.swift in Sources */,
+				BB3EDC432679068700069FE4 /* Course+CoreDataClass.swift in Sources */,
 				BB3EDBB02672983C00069FE4 /* AddWorkoutViewController.swift in Sources */,
-				BB3EDBF32673987000069FE4 /* Course+CoreDataClass.swift in Sources */,
 				95307AE22663E2760066A156 /* TimerViewController.swift in Sources */,
 				95307AA4265FE1ED0066A156 /* SceneDelegate.swift in Sources */,
-				BB3EDBF12673987000069FE4 /* Workout+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

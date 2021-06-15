@@ -2,7 +2,7 @@
 //  Course+CoreDataProperties.swift
 //  ios_project
 //
-//  Created by 陳宥儒 on 2021/6/14.
+//  Created by 陳宥儒 on 2021/6/16.
 //
 //
 
@@ -19,6 +19,7 @@ extension Course {
     @NSManaged public var cid: UUID?
     @NSManaged public var name: String?
     @NSManaged public var containWorkouts: NSOrderedSet?
+    @NSManaged public var records: NSSet?
 
 }
 
@@ -54,6 +55,23 @@ extension Course {
 
     @objc(removeContainWorkouts:)
     @NSManaged public func removeFromContainWorkouts(_ values: NSOrderedSet)
+
+}
+
+// MARK: Generated accessors for records
+extension Course {
+
+    @objc(addRecordsObject:)
+    @NSManaged public func addToRecords(_ value: Record)
+
+    @objc(removeRecordsObject:)
+    @NSManaged public func removeFromRecords(_ value: Record)
+
+    @objc(addRecords:)
+    @NSManaged public func addToRecords(_ values: NSSet)
+
+    @objc(removeRecords:)
+    @NSManaged public func removeFromRecords(_ values: NSSet)
 
 }
 

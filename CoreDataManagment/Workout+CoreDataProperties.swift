@@ -2,7 +2,7 @@
 //  Workout+CoreDataProperties.swift
 //  ios_project
 //
-//  Created by 陳宥儒 on 2021/6/14.
+//  Created by 陳宥儒 on 2021/6/16.
 //
 //
 
@@ -16,15 +16,16 @@ extension Workout {
         return NSFetchRequest<Workout>(entityName: "Workout")
     }
 
-    @NSManaged public var wid: UUID?
     @NSManaged public var info: String?
     @NSManaged public var name: String?
     @NSManaged public var rest: Float
     @NSManaged public var set: Int16
     @NSManaged public var target: Float
     @NSManaged public var time: Float
+    @NSManaged public var wid: UUID?
     @NSManaged public var belongTo: Course?
     @NSManaged public var containWorkouts: NSOrderedSet?
+    @NSManaged public var records: NSSet?
     @NSManaged public var superWorkout: Workout?
 
 }
@@ -61,6 +62,23 @@ extension Workout {
 
     @objc(removeContainWorkouts:)
     @NSManaged public func removeFromContainWorkouts(_ values: NSOrderedSet)
+
+}
+
+// MARK: Generated accessors for records
+extension Workout {
+
+    @objc(addRecordsObject:)
+    @NSManaged public func addToRecords(_ value: Record)
+
+    @objc(removeRecordsObject:)
+    @NSManaged public func removeFromRecords(_ value: Record)
+
+    @objc(addRecords:)
+    @NSManaged public func addToRecords(_ values: NSSet)
+
+    @objc(removeRecords:)
+    @NSManaged public func removeFromRecords(_ values: NSSet)
 
 }
 

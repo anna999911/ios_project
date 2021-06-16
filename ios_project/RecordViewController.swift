@@ -37,7 +37,7 @@ class RecordViewController: UIViewController {
         formatter.dateFormat = "yyyy-MM-dd"
         let fromDateTime = formatter.date(from: "2019-01-02")
         myDatePicker.minimumDate = fromDateTime
-        let endDateTime = formatter.date(from: "2020-06-16")
+        let endDateTime = formatter.date(from: "2021-06-17")
         myDatePicker.maximumDate = endDateTime
         myDatePicker.locale = NSLocale(
             localeIdentifier: "zh_TW") as Locale
@@ -82,11 +82,12 @@ class RecordViewController: UIViewController {
     @objc func datePickerChanged(datePicker:UIDatePicker) {
         // 設置要顯示在 UILabel 的日期時間格式
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd "
+        formatter.dateFormat = "yyyy-MM-dd"
 
         // 更新 UILabel 的內容
         myLabel.text = formatter.string(
             from: datePicker.date)
+        //print(CoreDataController.Instance()?.getRecordList(_date: formatter.string(from: datePicker.date)))
     }
     /*
     // MARK: - Navigation

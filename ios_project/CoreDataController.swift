@@ -272,13 +272,16 @@ class CoreDataController
             return record
         }
     }
-    public func getRecordList(_date: String, _cid: UUID, _wid: UUID) -> [Record]
+    public func getRecordList(_date: String) -> [Record]
     {
         var records: [Record] = []
         let fetchRequest: NSFetchRequest<Record> = Record.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "course.cid == %@ && workout.wid == %@ && date == %@", _cid as CVarArg, _wid as CVarArg, _date as CVarArg)
-        let sort = NSSortDescriptor(key: "lap", ascending: true)
-        fetchRequest.sortDescriptors = [sort]
+        fetchRequest.predicate = NSPredicate(format: "date like '\(_date)'")
+        let sort1 = NSSortDescriptor(key: "course.cid", ascending: true)
+        let sort2 = NSSortDescriptor(key: "workout.wid", ascending: true)
+        let sort3 = NSSortDescriptor(key: "set", ascending: true)
+        let sort4 = NSSortDescriptor(key: "lap", ascending: true)
+        fetchRequest.sortDescriptors = [sort1, sort2, sort3, sort4]
         do{
             records = try viewContext.fetch(fetchRequest)
             return records

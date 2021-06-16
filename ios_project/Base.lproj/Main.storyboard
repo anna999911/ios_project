@@ -618,19 +618,23 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PRL-86-a1z">
-                                <rect key="frame" x="96" y="427" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="13" y="400" width="388" height="439"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="VHJ-p0-DQe">
-                                        <rect key="frame" x="0.0" y="28" width="240" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="388" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VHJ-p0-DQe" id="ibc-cI-CzL">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="388" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="1oO-UF-GPD" id="1eB-Mt-pPy"/>
+                                    <outlet property="delegate" destination="1oO-UF-GPD" id="nIM-CB-r3P"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ErM-ug-znB"/>
@@ -644,7 +648,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="showRecoed" destination="PRL-86-a1z" id="TbH-sS-Kd7"/>
+                        <outlet property="showRecord" destination="PRL-86-a1z" id="iiJ-Ag-m5p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MWJ-DW-Ikm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

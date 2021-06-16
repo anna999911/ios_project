@@ -8,30 +8,35 @@
 import UIKit
 import CoreData
 
-class RecordViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
+class RecordViewController: UIViewController ,UITableViewDelegate, UITableViewDataSource{
+    
+    var d:[Record] = []
+
+    @IBOutlet weak var showRecord: UITableView!
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        d.count
+        return d.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell  = showRecoed.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = String(d[indexPath.row].time)
+        let cell  = showRecord.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        if indexPath.row == 0
+        {
+            cell.textLabel?.text = "Name\t\tSet \t Lap \t Time"
+            return cell
+        }
+        let r: Record! = d[indexPath.row - 1]
+        let t = String(format: "%.2f", r.time)
+        let n: String! = r.workout!.name
+        cell.textLabel?.text = "\(String(n))\t\t\t\(r.set)\t\t\(r.lap)\t\t\(t)"
         
         return cell
-        
-        
     }
-    
-
-    @IBOutlet weak var showRecoed: UITableView!
-
     
     //UI Event
     @IBAction func Edit(_ sender: UIBarButtonItem)
     {
     }
-    
-    
  
     let fullScreenSize = UIScreen.main.bounds.size
     var myLabel = UILabel(frame: CGRect(
@@ -93,7 +98,7 @@ class RecordViewController: UIViewController ,UITableViewDelegate,UITableViewDat
         self.view.addSubview(myLabel)
         
     }
-    var d:[Record] = []
+    
   
     @objc func datePickerChanged(datePicker:UIDatePicker) {
         // 設置要顯示在 UILabel 的日期時間格式
@@ -106,10 +111,7 @@ class RecordViewController: UIViewController ,UITableViewDelegate,UITableViewDat
         
         d = (CoreDataController.Instance()?.getRecordList(_date: formatter.string(
                                                             from: datePicker.date))) as! [Record]
-        
-        
-        
-        
+        showRecord.reloadData()
     }
     
     /*

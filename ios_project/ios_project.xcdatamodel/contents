@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="20D75" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19G2021" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Course" representedClassName="Course" syncable="YES">
         <attribute name="cid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
@@ -27,6 +27,7 @@
         <relationship name="records" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Record" inverseName="workout" inverseEntity="Record"/>
         <relationship name="superWorkout" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Workout" inverseName="containWorkouts" inverseEntity="Workout"/>
     </entity>
+    <fetchRequest name="FetchRequest" entity="Course" predicateString="cid CONTAINS &quot;&quot;"/>
     <elements>
         <element name="Course" positionX="-45" positionY="0" width="128" height="103"/>
         <element name="Record" positionX="-207" positionY="201" width="128" height="133"/>

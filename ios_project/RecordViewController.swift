@@ -8,9 +8,24 @@
 import UIKit
 import CoreData
 
-class RecordViewController: UIViewController {
+class RecordViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        d.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell  = showRecoed.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = String(d[indexPath.row].time)
+        
+        return cell
+        
+        
+    }
+    
 
+    @IBOutlet weak var showRecoed: UITableView!
 
+    
     //UI Event
     @IBAction func Edit(_ sender: UIBarButtonItem)
     {
@@ -78,7 +93,8 @@ class RecordViewController: UIViewController {
         self.view.addSubview(myLabel)
         
     }
-   
+    var d:[Record] = []
+  
     @objc func datePickerChanged(datePicker:UIDatePicker) {
         // 設置要顯示在 UILabel 的日期時間格式
         let formatter = DateFormatter()
@@ -87,8 +103,15 @@ class RecordViewController: UIViewController {
         // 更新 UILabel 的內容
         myLabel.text = formatter.string(
             from: datePicker.date)
-        //print(CoreDataController.Instance()?.getRecordList(_date: formatter.string(from: datePicker.date)))
+        
+        d = (CoreDataController.Instance()?.getRecordList(_date: formatter.string(
+                                                            from: datePicker.date))) as! [Record]
+        
+        
+        
+        
     }
+    
     /*
     // MARK: - Navigation
 

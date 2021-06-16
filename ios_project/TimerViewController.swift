@@ -15,6 +15,7 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
     //stopwatch variable
     var timer = Timer()
     var lapTimeList: [String] = []
+    
     //StoryBoard variable
     @IBOutlet weak var stopWatchTime: UILabel!
     @IBOutlet weak var startStopButton: UIButton!

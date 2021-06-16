@@ -284,6 +284,7 @@ class CoreDataController
         fetchRequest.sortDescriptors = [sort1, sort2, sort3, sort4]
         do{
             records = try viewContext.fetch(fetchRequest)
+            //print(records)
             return records
         } catch{
             print(error)
